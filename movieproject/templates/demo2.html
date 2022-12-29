@@ -1,0 +1,22 @@
+{%  extends 'base.html' %}
+{% block body %}
+<br>
+<div class="container">
+    <div class="row">
+        {% for i in movielist %}
+        <div class="row3">
+            <br>
+            <div class="card" style="width: 18rem;">
+           <img sr.c="{{i.img.url}}"alt="Card image cap" width="285" height="280">
+
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="{% url 'myapp:details' i.id %}" class="btn btn-primary">Go somewhere"</a>
+  </div>
+</div>
+        </div>
+        {% endfor %}
+       </div>
+</div>
+{% endblock %}

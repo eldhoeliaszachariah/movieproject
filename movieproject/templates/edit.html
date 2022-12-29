@@ -1,0 +1,8 @@
+{%  extends 'base.html' %}
+{% block body %}
+<form method="POST" enctype="multipart/form-data">
+      <font color="#FFFFFF">{% csrf_token %}</font>
+      <font color="#FFFFFF">{{form.as_p}}</font>
+      <font color="#FFFFFF"><input type="submit"></font><br>
+</form>
+{% endblock %}
